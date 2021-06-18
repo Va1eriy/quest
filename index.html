@@ -35,7 +35,7 @@
           var key = document.getElementById("inputKey").value;
           xmlHttp.onreadystatechange = function () {
           verifyHandler(xmlHttp) }
-          const url='/1/?key=' + key;
+          const url='http://localhost:5000/1/?key=' + key;
           xmlHttp.open("GET", url, true);
           xmlHttp.send();
 
