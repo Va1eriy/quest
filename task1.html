@@ -38,7 +38,7 @@
           xmlHttp.onreadystatechange = function () {
           verifyHandler(xmlHttp) }
           // const url='http://localhost:5000/1/?key=' + key;
-          const url='http://flask-env-quest.eba-qxv58n9f.ap-southeast-1.elasticbeanstalk.com/1/?key=' + key;
+          const url='http://ec2-35-178-167-65.eu-west-2.compute.amazonaws.com/1/?key=' + key;
 
           xmlHttp.open("GET", url, true);
           xmlHttp.send();
