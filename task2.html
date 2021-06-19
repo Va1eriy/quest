@@ -6,5 +6,39 @@
   </head>
   <body>
     <h1>Задание 2/5</h1>
+    <center>
+    <p>
+    Уважаеный Юзернейм, <br>
+    Вас приветствует тайное общество содоводов-любителей. До нас дошла информация о том, что вы готовы вступить в наши ляды. Но для этого необходимо пройти несколько простых испытаний. После их прохождения, вам станут доступны сакральные знания о том, почему россада улыбается, зачем нужны сосновые иголги в борьбе с вредителями, как вырастить цитрысовые с использованием самогона, чем отличаются Виктория и Машенька, зачем заливать ботву помидоров водои, как приманить слизней и  избавиться от кротов и многое другое! В свободное време мы придумываем головоломки, доказываем, что Земля плоская и занимаемся поисками Йети.
+    Пора начинать!
+    </p>
+    <input type="text" name="key" id="inputKey" />
+    <button onclick="verifyKey()">Ответ</button>
+    </center>
+
+      <script>
+        function verifyHandler(xmlHttp) {
+          if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            window.location.replace("task3.html");
+          }
+          else {
+            document.getElementById("result").innerHTML = xmlHttp.responseText;
+            console.log('err', xmlHttp.responseText)
+
+          }
+        }
+        function verifyKey() {
+          var xmlHttp = new XMLHttpRequest();
+          var key = document.getElementById("inputKey").value;
+          xmlHttp.onreadystatechange = function () {
+          verifyHandler(xmlHttp) }
+          const url='http://flask-env-quest.eba-qxv58n9f.ap-southeast-1.elasticbeanstalk.com/2/?key=' + key;
+          xmlHttp.open("GET", url, true);
+          xmlHttp.send();
+        }
+      </script>
+      <p>
+        <font color="red" id="result"> </font>
+      </p>
   </body>
 </html>
