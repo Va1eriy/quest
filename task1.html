@@ -27,7 +27,7 @@
       function verifyHandler(xmlHttp)
       {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-          window.location.replace("task2.html");
+          window.location.replace(xmlHttp.responseText);
         }
         else
         {
