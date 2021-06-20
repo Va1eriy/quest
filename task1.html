@@ -6,47 +6,47 @@
     <title>Title</title>
   </head>
   <body>
-
     <h1>Задание 1/5</h1>
-    <center><img src="lockIcon.png" width = 300px>
-    <p>
-      <b>086</b> одна цифра верна, и она на своем месте <br>
-      <b>095</b> одна цифра верна, но не на своем месте<br>
-      <b>610</b> две цифры верны, но не на своем месте<br>
-      <b>238</b> нет верных цифр<br>
-      <b>821</b> одна цифра верна и не на своем месте
-    </p>
-
-    <input type="text" name="key" id="inputKey" />
-    <button onclick="verifyKey()">Ответ</button>
-    </center>
-
-      <script>
-        function verifyHandler(xmlHttp) {
-          if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            window.location.replace("task2.html");
-          }
-          else {
-            document.getElementById("result").innerHTML = xmlHttp.responseText;
-            console.log('err', xmlHttp.responseText)
-
-          }
-        }
-        function verifyKey() {
-          var xmlHttp = new XMLHttpRequest();
-          var key = document.getElementById("inputKey").value;
-          xmlHttp.onreadystatechange = function () {
-          verifyHandler(xmlHttp) }
-          // const url='http://localhost:5000/1/?key=' + key;
-          const url='http://ec2-35-178-167-65.eu-west-2.compute.amazonaws.com/1/?key=' + key;
-
-          xmlHttp.open("GET", url, true);
-          xmlHttp.send();
-        }
-      </script>
+    <center>
+      <img src="lockIcon.png" width = 300px>
+      <p>
+        <b>086</b> одна цифра верна, и она на своем месте <br>
+        <b>095</b> одна цифра верна, но не на своем месте<br>
+        <b>610</b> две цифры верны, но не на своем месте<br>
+        <b>238</b> нет верных цифр<br>
+        <b>821</b> одна цифра верна и не на своем месте
+      </p>
+      <input type="text" name="key" id="inputKey" />
+      <button onclick="verifyKey()">Ответ</button>
       <p>
         <font color="red" id="result"> </font>
       </p>
+    </center>
 
+    <script>
+      function verifyHandler(xmlHttp)
+      {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+          window.location.replace("task2.html");
+        }
+        else
+        {
+          document.getElementById("result").innerHTML = xmlHttp.responseText;
+          console.log('err', xmlHttp.responseText)
+
+        }
+      }
+      function verifyKey()
+      {
+        var xmlHttp = new XMLHttpRequest();
+        var key = document.getElementById("inputKey").value;
+        xmlHttp.onreadystatechange = function () {
+        verifyHandler(xmlHttp) }
+        //const url='http://localhost:5000/1/?key=' + key;
+        const url='https://devholo.me/flask/1/?key=' + key;
+        xmlHttp.open("GET", url, true);
+        xmlHttp.send();
+      }
+    </script>
     </body>
   </html>
