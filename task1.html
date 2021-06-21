@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;">
+<html>
+
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>task1</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="task1.css" media="screen">
+    <link rel="stylesheet" href="tasks.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js"></script>
     <script class="u-script" type="text/javascript" src="nicepage.js"></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
@@ -15,16 +16,18 @@
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-image u-image-contain" style="background-position: 50% 50%">
-    <section class="u-align-center u-clearfix u-image u-section-1" id="sec-9647" data-image-width="1980" data-image-height="1100">
+    <section class="u-align-center u-clearfix u-image u-section-1" data-image-width="1980" data-image-height="1100">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <img class="u-image u-image-default u-preserve-proportions u-image-1" src="lock.png" data-image-width="521" data-image-height="521">
-        <p class="u-align-left u-custom-font u-font-raleway u-text u-text-white u-text-1"><b>086</b>&nbsp;одна цифра верна, и она на своем месте<br><b>095</b>&nbsp;одна цифра верна, но не на своем месте<br><b>610</b>&nbsp;две цифры верны, но не на своем месте<br><b>238</b>&nbsp;нет верных цифр<br><b>821</b>&nbsp;одна цифра верна и не на своем месте&nbsp;
+        <p class="u-align-left u-custom-font u-font-raleway u-text u-text-1"><b>086</b>&nbsp;одна цифра верна, и она на своем месте<br><b>095</b>&nbsp;одна цифра верна, но не на своем месте<br><b>610</b>&nbsp;две цифры верны, но не на своем месте<br><b>238</b>&nbsp;нет верных цифр<br><b>821</b>&nbsp;одна цифра верна и не на своем месте&nbsp;
         </p>
         <p align="center">
           <input type="text" class="textField u-radius-8" name="key" id="inputKey">
           <button onclick="verifyKey()" class=" u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-8 u-btn-1">Ответить</button>
-          <br><font color="red" id="result"> </font>
         </p>
+        <section class="bgBlock u-font-raleway errorText u-custom-font u-font-raleway u-text" align="center">
+          <font align="center" color="#ae4343" id="result"> </font>
+        </section>
       </div>
     </section>
     <script>

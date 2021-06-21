@@ -40,13 +40,12 @@ def verify(quest_id):
     quest = quests[quest_id]
     if presented_key == quest["key"]:
         return quest["next_page"]
-        #return send_from_directory('.', quest["next_page"])
     else:
         print(f"log: Q {quest_id} TRY {quests_try[quest_id]}")
         if  "hint" in quest and quests_try[quest_id] >= 5:
             return quest["hint"], 400
         quests_try[quest_id] = quests_try[quest_id]+1
-        return "Wrong key", 400
+        return "Неверный ответ", 400
 
 @app.route('/reset/')
 def reset_try():
