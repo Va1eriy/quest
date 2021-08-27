@@ -15,10 +15,7 @@
     <section class="u-align-center u-clearfix u-image u-section-1" data-image-width="1980" data-image-height="1100">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <p class="u-custom-font u-font-raleway u-text u-text-1" align="center">
-          Павел, здравствуйте!<br><br>Сейчас внимательно прочитайте каждое слово. <br>Это не просто сайт, посвещенный дню вашего рожденья.
-          Это череда заданий, которые привидут вас к цели. А что это за цель, вы узнаите позже!
-          Как и в любом задании есть диференциация: поэтому будьте внимательны, может быть что-то покажется вам странным.
-          В любом случае, после такого задания хорошо выйти на терасу с кофейком и отдохнуть. Удачи!
+          Субботнее традиционное блюдо котов
         </p>
         <p align="center">
           <input type="text" class="textField u-radius-8" name="key" id="inputKey">
@@ -47,8 +44,8 @@
         var key = document.getElementById("inputKey").value;
         xmlHttp.onreadystatechange = function () {
         verifyHandler(xmlHttp) }
-        const url='http://localhost:5000/1/?key=' + key;
-        //const url='https://devholo.me/flask/1/?key=' + key;
+        const url='http://localhost:5000/3/?key=' + key;
+        //const url='https://devholo.me/flask/3/?key=' + key;
         xmlHttp.open("GET", url, true);
         xmlHttp.send();
       }

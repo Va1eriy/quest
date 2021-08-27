@@ -10,16 +10,12 @@
     <script class="u-script" type="text/javascript" src="nicepage.js"></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-
-    <meta property="og:title" content="task1">
-    <meta property="og:type" content="website">
   </head>
   <body class="u-body u-image u-image-contain" style="background-position: 50% 50%">
     <section class="u-align-center u-clearfix u-image u-section-1" data-image-width="1980" data-image-height="1100">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <p class="u-align-left u-custom-font u-font-raleway u-text u-text-1">
-          Уважаеный {username},<br> <br>Вас приветствует тайное общество содоводов-любителей. До нас дошла информация о том, что вы готовы вступить в наши ляды. Но для этого необходимо пройти несколько простых испытаний. После их прохождения, вам станут доступны сакральные знания о том, почему россада улыбается, зачем нужны сосновые иголги в борьбе с вредителями, как вырастить цитрысовые с использованием самогона, чем отличаются Виктория и Машенька, зачем заливать ботву помидоров водои, как приманить слизней и  избавиться от кротов и многое другое! В свободное време мы придумываем головоломки, доказываем, что Земля плоская и занимаемся поисками Йети.
-
+        <p class="u-custom-font u-font-raleway u-text u-text-1" align="center">
+          Автор книги, которая очень долго ждала тебя и, наверное, до сих пор ждёт
         </p>
         <p align="center">
           <input type="text" class="textField u-radius-8" name="key" id="inputKey">
@@ -48,8 +44,8 @@
         var key = document.getElementById("inputKey").value;
         xmlHttp.onreadystatechange = function () {
         verifyHandler(xmlHttp) }
-        //const url='http://localhost:5000/1/?key=' + key;
-        const url='https://devholo.me/flask/2/?key=' + key;
+        const url='http://localhost:5000/5/?key=' + key;
+        //const url='https://devholo.me/flask/5/?key=' + key;
         xmlHttp.open("GET", url, true);
         xmlHttp.send();
       }

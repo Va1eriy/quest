@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -10,23 +11,23 @@
     <script class="u-script" type="text/javascript" src="nicepage.js"></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+    <meta property="og:title" content="task1">
+    <meta property="og:type" content="website">
   </head>
   <body class="u-body u-image u-image-contain" style="background-position: 50% 50%">
     <section class="u-align-center u-clearfix u-image u-section-1" data-image-width="1980" data-image-height="1100">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <p class="u-custom-font u-font-raleway u-text u-text-1" align="center">
-          Павел, здравствуйте!<br><br>Сейчас внимательно прочитайте каждое слово. <br>Это не просто сайт, посвещенный дню вашего рожденья.
-          Это череда заданий, которые привидут вас к цели. А что это за цель, вы узнаите позже!
-          Как и в любом задании есть диференциация: поэтому будьте внимательны, может быть что-то покажется вам странным.
-          В любом случае, после такого задания хорошо выйти на терасу с кофейком и отдохнуть. Удачи!
+        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="lock.png" data-image-width="521" data-image-height="521">
+        <p class="u-align-center u-custom-font u-font-raleway u-text u-text-1"><b>086</b>&nbsp;одна цифра верна, и она на своем месте<br><b>095</b>&nbsp;одна цифра верна, но не на своем месте<br><b>610</b>&nbsp;две цифры верны, но не на своем месте<br><b>238</b>&nbsp;нет верных цифр<br><b>821</b>&nbsp;одна цифра верна и не на своем месте&nbsp;
         </p>
         <p align="center">
           <input type="text" class="textField u-radius-8" name="key" id="inputKey">
           <button onclick="verifyKey()" class=" u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-8 u-btn-1">Ответить</button>
-          <section class="bgBlock u-font-raleway errorText u-custom-font u-font-raleway u-text" align="center">
-            <font align="center" color="#ae4343" id="result"> </font>
-          </section>
         </p>
+        <section class="bgBlock u-font-raleway errorText u-custom-font u-font-raleway u-text" align="center">
+          <font align="center" color="#ae4343" id="result"> </font>
+        </section>
       </div>
     </section>
     <script>
@@ -47,8 +48,8 @@
         var key = document.getElementById("inputKey").value;
         xmlHttp.onreadystatechange = function () {
         verifyHandler(xmlHttp) }
-        const url='http://localhost:5000/1/?key=' + key;
-        //const url='https://devholo.me/flask/1/?key=' + key;
+        const url='http://localhost:5000/8/?key=' + key;
+        //const url='https://devholo.me/flask/8/?key=' + key;
         xmlHttp.open("GET", url, true);
         xmlHttp.send();
       }
