@@ -44,8 +44,8 @@
         var key = document.getElementById("inputKey").value;
         xmlHttp.onreadystatechange = function () {
         verifyHandler(xmlHttp) }
-        const url='http://localhost:5000/6/?key=' + key;
-        //const url='https://devholo.me/flask/6/?key=' + key;
+        // const url='http://localhost:5000/6/?key=' + key;
+        const url='https://devholo.me/flask/6/?key=' + key;
         xmlHttp.open("GET", url, true);
         xmlHttp.send();
       }
