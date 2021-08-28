@@ -45,6 +45,7 @@
       {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.withCredentials = true
+
         var key = document.getElementById("inputKey").value;
         xmlHttp.onreadystatechange = function () {
         verifyHandler(xmlHttp) }
